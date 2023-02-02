@@ -9,6 +9,14 @@ import java.net.URL;
 public class httpClient {
     private static final String USER_AGENT = "Mozilla/5.0";
     //private static final String GET_URL = "http://www.omdbapi.com/?i=tt3896198&apikey=2c402a46";
+    
+    
+    /**
+     * Método que permite hacer peticiones a la API
+     * @param url Url con el nombre de la película a consultar
+     * @return String que contiene la respuesta por parte de la API
+     * @throws IOException
+     */
 
     public static String getAnswer(String url) throws IOException {
 
