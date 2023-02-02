@@ -20,88 +20,48 @@ git clone https://github.com/carol695/Taller1_AREP.git
 ```
 **2. Ya clonado el repositorio abrimos el laboratorio utilizando cualquier de los siguientes IDE.**
 
-![image](https://user-images.githubusercontent.com/63822072/216463218-2dd698e3-adea-4e7f-8eb5-566b317f7d9b.png)
+* Intellij.
+* eclipse.
+* visual Studio code. 
 
-**3. Luego de abrir el laboratorio, corremos el proyecto.**
+**3. Luego de abrir el laboratorio, corremos el proyecto. Para este caso colocaremos lo siguiente: **
 
+```
+git clean package exec:java -D"exec.mainClass"="edu.escuelaing.arem.app.httpServer"
+```
+
+
+Una vez veamos el mensaje de "Listo para recibir ..." entramos al buscador de preferencia y entramos al link http://localhost:35000 alli podremos ingresar el nombre de una película
 
 ****
-### Prerequisites
+### :chart_with_downwards_trend: Prerrequisitos
 
-What things you need to install the software and how to install them
+-   [Git](https://git-scm.com/downloads) - Sistema de control de versiones
+-   [Maven](https://maven.apache.org/download.cgi) - Gestor de dependencias
+-   [Java 8](https://www.java.com/download/ie_manual.jsp) - Entorno de desarrollo
+-   [Intellij Idea](https://www.jetbrains.com/es-es/idea/download/) (Opcional)
 
-```
-Give examples
-```
+### :construction: Arquitectura propuesta
 
-### Installing
+![image](https://user-images.githubusercontent.com/63822072/216467924-5fa01c56-45fd-44c5-92c2-db300a2bda2c.png)
 
-A step by step series of examples that tell you how to get a development env running
+![image](https://user-images.githubusercontent.com/63822072/216468791-ad18b9b2-342d-44d0-9f4c-dd992f91c172.png)
 
-Say what the step will be
 
-```
-Give the example
-```
+### :bulb: Construido con
 
-And repeat
-
-```
-until finished
-```
-
-End with an example of getting some data out of the system or using it for a little demo
-
-## Running the tests
-
-Explain how to run the automated tests for this system
-
-### Break down into end to end tests
-
-Explain what these tests test and why
-
-```
-Give an example
-```
-
-### And coding style tests
-
-Explain what these tests test and why
-
-```
-Give an example
-```
-
-## Deployment
-
-Add additional notes about how to deploy this on a live system
-
-## Built With
-
-* [Dropwizard](http://www.dropwizard.io/1.0.2/docs/) - The web framework used
 * [Maven](https://maven.apache.org/) - Dependency Management
-* [ROME](https://rometools.github.io/rome/) - Used to generate RSS Feeds
 
-## Contributing
+## :mag_right: Versionamiento
 
-Please read [CONTRIBUTING.md](https://gist.github.com/PurpleBooth/b24679402957c63ec426) for details on our code of conduct, and the process for submitting pull requests to us.
+Para definir el versionamiento se pudo obserar los tags del repositorio, y el versionaiento es 1.0 
 
-## Versioning
+## :woman: Actores
 
-We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/your/project/tags). 
+* **Carol Tatiana Cely Rodriguez** 
 
-## Authors
+## :page_with_curl: Descripción
 
-* **Billie Thompson** - *Initial work* - [PurpleBooth](https://github.com/PurpleBooth)
-
-See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project.
-
-## License
-
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
-
-## Acknowledgments
-
-* Hat tip to anyone whose code was used
-* Inspiration
-* etc
+- `Extensibilidad`:  Existe extensibilidad debido a que se puede cambiar la pagina a la que se quiere traer la información.
+- `Patrones`: Se utiliza el patron estructural de fachada, debido a que proporciona una interfaz simplificada, un framework o cualquier otro grupo complejo de clases. 
+- `Moduralidad`: En esta aplicación se cuenta con moduralidad, ya que se subdivide esta aplicación en partes más pequeñas, realizando cada una un trabajo un poco independiente de la aplicación. 
