@@ -16,6 +16,14 @@ public class httpServer {
     private static final String url = "http://www.omdbapi.com/?t=";
     private static final String key = "&apikey=2c402a46";
 
+    
+     /**
+     * Método principal, inicia un socket
+     * recibe la petición get y agrega el nombre a de la
+     * película seleccionada a la URL de la API
+     * @param args
+     * @throws IOException
+     */
     public static void main(String[] args) throws IOException, JSONException {
         ServerSocket serverSocket = null;
 
@@ -63,7 +71,7 @@ public class httpServer {
                             + "Content-Type: text/html\r\n"
                             + "\r\n"
                             + "<br>"
-                            + "<table border=\" 1 \"> \n " + doTable(answer)
+                            + "<table border=\" 1 \"> \n " + tableFront(answer)
                             + "</table>";
                 }
                 else{
@@ -73,7 +81,7 @@ public class httpServer {
                             + "Content-Type: text/html\r\n"
                             + "\r\n"
                             + "<br>"
-                            + "<table border=\" 1 \"> \n " + doTable(answer)
+                            + "<table border=\" 1 \"> \n " + tableFront(answer)
                             + "</table>";
                 }
             } else {
@@ -91,11 +99,11 @@ public class httpServer {
     }
 
     /**
-     * Method that creates a table in String(JSON) format
+     * Metodo para crear una tabla en formato String JSON
      * @param response String movie information
      * @return String(JSON)
      */
-    private static String doTable(String response) throws JSONException {
+    private static String tableFront(String response) throws JSONException {
         HashMap<String,String> dict = new HashMap<String, String>();
         JSONArray jsonArray = new JSONArray(response);
         for (int i=0; i<jsonArray.length();i++){
